@@ -1,59 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-  </head>
-  <body>
-    <div class="login-page-wrapp d-flex">
-      <div class="login-form-wrap d-flex align-items-center">
+</head>
+<body>
+
+<div class="login-page-wrapp d-flex">
+    <div class="login-form-wrap d-flex align-items-center">
         <div class="form-card card ml-auto">
-          <div class="card-body">
-            <h4 class="card-title">Please Login</h4>
-            <form name="loginForm">
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                  data-required="email"
-                  data-invalid-message="Please provide valid email example@example.com"
-                />
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Password"
-                  data-required="password"
-                />
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="true">Signup</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="card-body tab-pane active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                    <h4 class="card-title">Please Login</h4>
+                    <form name="loginForm">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    aria-describedby="emailHelp"
+                                    placeholder="Enter email"
+                                    data-required="email"
+                                    data-invalid-message="Please provide valid email example@example.com"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input
+                                    type="password"
+                                    class="form-control"
+                                    id="password"
+                                    placeholder="Password"
+                                    data-required="password"
+                            />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <!-- register -->
+                <div class="card-body tab-pane" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                    <h4 class="card-title">Please Signup</h4>
+                    <form name="signupForm" autocomplete="off">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input
+                                    type="email"
+                                    class="form-control"
+                                    id="signUpEmail"
+                                    aria-describedby="emailHelp"
+                                    placeholder="Enter email"
+                                    data-required="email"
+                                    data-invalid-message="Please provide valid email example@example.com"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input
+                                    type="password"
+                                    class="form-control"
+                                    id="signUpPassword"
+                                    placeholder="Password"
+                                    data-required="password"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="nickname">Nickname</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    id="nickname"
+                                    placeholder="nickname"
+
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="first_name">First name</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    id="first_name"
+                                    placeholder="First name"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name">Last name</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    id="last_name"
+                                    placeholder="Last name"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input
+                                    type="tel"
+                                    class="form-control"
+                                    id="phone"
+                                    placeholder="Phone"
+                                    maxlength="11"
+                                    data-required="phone"
+                                    data-invalid-message="Please provide valid phone number (11 symbols)"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="gender_orientation">Gender orientation</label>
+                            <select class="custom-select" id="gender_orientation">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input
+                                    type="text"
+                                    class="form-control autocomplete"
+                                    id="country"
+                                    placeholder="Country"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    id="city"
+                                    placeholder="City"
+                                    readonly
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="date_of_birth_day">Date of birth day</label>
+                            <input
+                                    type="number"
+                                    class="form-control"
+                                    id="date_of_birth_day"
+                                    placeholder="Date of birth day"
+                                    data-required="date_of_birth_day"
+                                    data-invalid-message="Birth day can't be over 31 days"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="date_of_birth_month">Date of birth month</label>
+                            <input
+                                    type="number"
+                                    class="form-control"
+                                    id="date_of_birth_month"
+                                    placeholder="Date of birth month"
+                                    data-required="date_of_birth_month"
+                                    data-invalid-message="Birthday month can't be over 12 months"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="date_of_birth_year">Date of birth year</label>
+                            <input
+                                    type="number"
+                                    class="form-control"
+                                    id="date_of_birth_year"
+                                    placeholder="Date of birth year"
+                                    data-required="date_of_birth_year"
+                                    data-invalid-message="IN WHICH YEAR YOU WERE BORN? REALLY??"
+                            />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <!--/.register -->
+            </div>
         </div>
-      </div>
-      <!-- /.login-form-wrap -->
-      <div class="login-greeting-screen d-flex align-items-center">
-        <div class="login-greeting-screen-text">
-          <h1 class="login-greeting-screen-title">Welcome to my app</h1>
-          <p class="login-greeting-screen-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            inventore non accusantium earum, illo dolores reprehenderit laborum
-            ratione quos doloribus repellat eligendi deleniti. Ipsum voluptate
-            ipsa exercitationem eaque totam. A.
-          </p>
-        </div>
-      </div>
-      <!-- /.login-greeting-screen -->
     </div>
-    <!-- /.login-page-wrapp -->
-  </body>
+    <!-- /.login-form-wrap -->
+    <div class="login-greeting-screen d-flex align-items-center">
+        <div class="login-greeting-screen-text">
+            <h1 class="login-greeting-screen-title">Welcome to my app</h1>
+            <p class="login-greeting-screen-description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+                inventore non accusantium earum, illo dolores reprehenderit laborum
+                ratione quos doloribus repellat eligendi deleniti. Ipsum voluptate
+                ipsa exercitationem eaque totam. A.
+            </p>
+        </div>
+    </div>
+    <!-- /.login-greeting-screen -->
+</div>
+<!-- /.login-page-wrapp -->
+</body>
 </html>
